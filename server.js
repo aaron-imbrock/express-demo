@@ -32,11 +32,11 @@ function handleGetData(req,res) {
     let output = { 
         name: "Aaron",
         age: age,
-        time: req.timestamp,
+        timestamp: req.timestamp,
         proof: req.proofOfAaron,
     }
     res.status(200).json(output);
-};
+};``
 
 function handleGetHome(req,res) {
     console.log(req.headers);
@@ -63,7 +63,7 @@ function handleBroken(req, res, next) {
 
 function start(port) {
     app.listen(port, () => {
-        console.log("listening on port " + port);
+        console.log(`listening on port ${port}`);
 });
 }
 
