@@ -4,8 +4,9 @@
   "description": "Server Demo",
   "main": "index.js",
   "scripts": {
-    "test": "none",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest --coverage",
+    "test-watch": "jest --watchAll --coverage"
   },
   "author": "Aaron Imbrock",
   "license": "MIT",
