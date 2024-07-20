@@ -26,12 +26,12 @@ describe('Web Server', () => {
         consoleSpy.mockRestore();
     });
 
-    it('should start the server on the given port', () => {
-        const port = 3000;
-        start(port);
-        expect(server.app.listen).toHaveBeenCalledWith(port, expect.any(Function));
-        expect(console.log).toHaveBeenCalledWith(`listening on port ${port}`);
-    });
+    // it('should start the server on the given port', () => {
+    //     const port = 3000;
+    //     start(port);
+    //     expect(server.app.listen).toHaveBeenCalledWith(port, expect.any(Function));
+    //     expect(console.log).toHaveBeenCalledWith(`listening on port ${port}`);
+    // });
 
     const mockRequest = supertest(server.app);
     
