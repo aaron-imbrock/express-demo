@@ -1,10 +1,12 @@
 name: Run Javascript Tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - dev
 
 jobs:
-  all:
-    name: Run Node Tests
+  build:
     runs-on: ubuntu-latest
 
     strategy:
@@ -14,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: "npm"
